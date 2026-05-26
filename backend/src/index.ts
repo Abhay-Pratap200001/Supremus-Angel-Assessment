@@ -15,18 +15,16 @@ app.use(express.json());
 
 app.use('/api/entries', formEntryRoutes);
 
-// serve frontend build in production
-// __dirname is available natively in CommonJS - no override needed
+app.get('/health', (_req, res) => {
+  res.json({ status: 'OK', message: 'Server is running' });
+});
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../../frontend/dist')));
   app.get('*', (_req, res) => {
     res.sendFile(path.resolve(__dirname, '../../frontend/dist/index.html'));
   });
 }
-
-app.get('/health', (_req, res) => {
-  res.json({ status: 'OK', message: 'Server is running' });
-});
 
 connectDB().then(() => {
   app.listen(PORT, () => {

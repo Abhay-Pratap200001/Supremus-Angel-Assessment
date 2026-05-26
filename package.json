@@ -1,0 +1,21 @@
+{
+  "name": "supremus_angle",
+  "version": "1.0.0",
+  "description": "A full-stack web application built for the **Supremus Angel Developer Assessment**.   Users build dynamic forms, see their data rendered live in a preview panel, and persist entries to MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npm run build",
+    "start": "cd backend && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhay-Pratap200001/Supremus-Angel-Assessment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhay-Pratap200001/Supremus-Angel-Assessment/issues"
+  },
+  "homepage": "https://github.com/Abhay-Pratap200001/Supremus-Angel-Assessment#readme"
+}
