@@ -99,10 +99,10 @@ function CreateEntry({ onSave }: Props) {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
 
       {/* ── FORM ─────────────────────────────────────────────── */}
-      <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-white/50">
+      <div className="bg-gradient-to-br from-[#cce8d4] to-[#b0d4bc] rounded-2xl shadow-md overflow-hidden border border-green-100/60">
 
         {/* dark green header */}
-        <div className="bg-[#1a2e1a] px-5 py-4 flex items-center gap-3">
+        <div className="bg-[#203420] px-5 py-4 flex items-center gap-3">
           <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
             <Sprout className="w-4 h-4 text-green-400" />
           </div>
@@ -126,7 +126,7 @@ function CreateEntry({ onSave }: Props) {
                 <Sprout className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-300" />
                 <input
                   type="text"
-                  className="w-full pl-9 pr-3 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-400 placeholder:text-gray-300 transition"
+                  className="w-full pl-9 pr-3 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-400 bg-[#cce0d2] placeholder:text-gray-300 transition"
                   placeholder="e.g. Employee Info"
                   value={title}
                   onChange={ev => setTitle(ev.target.value)}
@@ -158,7 +158,7 @@ function CreateEntry({ onSave }: Props) {
               {fields.map((field, i) => (
                 <div
                   key={field.id}
-                  className="bg-white border border-gray-100 rounded-xl p-3.5 mb-3 hover:border-green-200 hover:shadow-sm transition-all animate-slide-down">
+                  className="bg-gradient-to-br from-[#d4eeda] to-[#b8d9c2] border border-green-100 rounded-xl p-3.5 mb-3 hover:border-green-300 hover:shadow-sm transition-all animate-slide-down">
                   {/* field header - grip, number, remove/dots */}
                   <div className="flex items-center gap-2 mb-3">
                     <GripVertical className="w-4 h-4 text-gray-300 cursor-grab flex-shrink-0" />
@@ -185,7 +185,7 @@ function CreateEntry({ onSave }: Props) {
                         <Tag className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-300" />
                         <input
                           type="text"
-                          className="w-full pl-7 pr-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-400 bg-gray-50 placeholder:text-gray-300 transition"
+                          className="w-full pl-7 pr-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-400 bg-[#cce0d2] placeholder:text-gray-300 transition"
                           placeholder="e.g. Name"
                           value={field.label}
                           onChange={ev => changeField(field.id, 'label', ev.target.value)}/>
@@ -198,7 +198,7 @@ function CreateEntry({ onSave }: Props) {
                         <Hash className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-300" />
                         <input
                           type="text"
-                          className="w-full pl-7 pr-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-400 bg-gray-50 placeholder:text-gray-300 transition"
+                          className="w-full pl-7 pr-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-400 bg-[#cce0d2] placeholder:text-gray-300 transition"
                           placeholder="e.g. John"
                           value={field.value}
                           onChange={ev => changeField(field.id, 'value', ev.target.value)}
@@ -216,7 +216,7 @@ function CreateEntry({ onSave }: Props) {
               <button
                 type="submit"
                 disabled={saving}
-                className="flex-1 bg-[#1a2e1a] text-white py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2 hover:bg-[#243d24] transition disabled:opacity-60 disabled:cursor-not-allowed">
+                className="flex-1 bg-[#1a2e1a] text-white py-2.5 rounded-xl text-sm font-medium flex items-center justify-center gap-2 hover:bg-[#366736] transition ease-in duration-200 disabled:opacity-60 disabled:cursor-not-allowed">
                 {saving ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
                 ) : (
@@ -227,7 +227,7 @@ function CreateEntry({ onSave }: Props) {
               <button
                 type="button"
                 onClick={resetForm}
-                className="px-4 py-2.5 border border-gray-200 text-gray-500 rounded-xl text-sm flex items-center gap-1.5 hover:bg-gray-50 transition"
+                className="px-4 py-2.5 border border-green-200 text-gray-500 rounded-xl text-sm flex items-center gap-1.5 hover:bg-[#b8d9c2] transition"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 Reset

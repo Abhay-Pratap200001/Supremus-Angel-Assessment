@@ -17,7 +17,7 @@ function DataPreview({ title, fields }: Props) {
   const hasData = title.trim() || filledFields.length > 0
 
   return (
-    <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-white/50 h-full">
+    <div className="bg-gradient-to-br from-[#cce8d4] to-[#b0d4bc] rounded-2xl shadow-md overflow-hidden border border-green-100/60 h-full">
 
       {/* preview header with leaf icon and live badge */}
       <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
@@ -82,7 +82,7 @@ function DataPreview({ title, fields }: Props) {
             {filledFields.map((field, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-3 py-2.5 px-3 rounded-lg mb-2 bg-gray-50 border border-gray-100 hover:bg-green-50 hover:border-green-100 transition-colors cursor-default"
+                className="flex items-center gap-3 py-2.5 px-3 rounded-lg mb-2 bg-[#c5e0cb] border border-green-200 hover:bg-[#aecfb6] hover:border-green-300 transition-colors cursor-default"
                 title={`${field.label}: ${field.value}`}
               >
                 <span className="text-gray-400 text-xs font-semibold w-24 shrink-0 truncate">

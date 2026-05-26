@@ -51,7 +51,7 @@ function SavedEntries({ entries, loading }: Props) {
           <div
             key={entry._id}
             className={`
-              bg-white rounded-xl border border-gray-100 border-l-4 ${accent.border}
+              bg-gradient-to-br from-[#d4eeda] to-[#b8d9c2] rounded-xl border border-green-100 border-l-4 ${accent.border}
               shadow-sm hover:shadow-lg hover:-translate-y-1
               transition-all duration-200 overflow-hidden
             `}
@@ -85,7 +85,7 @@ function SavedEntries({ entries, loading }: Props) {
             </div>
 
             {/* divider */}
-            <div className="h-px bg-gray-100 mx-4" />
+            <div className="h-px bg-green-100 mx-4" />
 
             {/* field rows */}
             <div className="px-4 py-3 space-y-2">

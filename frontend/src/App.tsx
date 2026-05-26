@@ -62,7 +62,7 @@ function App() {
         </div>
 
         {/* saved entries from the database */}
-        <div className="bg-white rounded-2xl shadow-md border border-white/50 p-5">
+        <div className="bg-gradient-to-br from-[#cce8d4] to-[#b0d4bc] rounded-2xl shadow-md border border-green-100/60 p-5">
           <div className="flex items-center gap-2.5 mb-5">
             <Leaf className="w-4 h-4 text-green-600" />
             <h2 className="font-semibold text-gray-800 text-base">Saved Entries</h2>
