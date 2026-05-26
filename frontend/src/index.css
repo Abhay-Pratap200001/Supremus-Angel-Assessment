@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* forest gradient background - fixed so it doesnt scroll with content */
+body {
+  background: linear-gradient(
+    to bottom,
+    #8fb48f 0%,
+    #5a8a5a 22%,
+    #2d5a2d 52%,
+    #162a16 78%,
+    #0d1a0d 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* thin scrollbar for the fields list */
+.fields-list::-webkit-scrollbar       { width: 4px; }
+.fields-list::-webkit-scrollbar-track { background: transparent; }
+.fields-list::-webkit-scrollbar-thumb { background: #bbf7d0; border-radius: 4px; }
