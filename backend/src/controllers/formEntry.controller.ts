@@ -11,8 +11,6 @@ export const getAllEntries = async (_req: Request, res: Response): Promise<void>
   }
 };
 
-
-
 export const getEntryById = async (req: Request, res: Response): Promise<void> => {
   try {
     const entry = await FormEntry.findById(req.params.id);
@@ -26,8 +24,6 @@ export const getEntryById = async (req: Request, res: Response): Promise<void> =
   }
 };
 
-
-
 export const createEntry = async (req: Request, res: Response): Promise<void> => {
   try {
     const entry = new FormEntry(req.body);
@@ -37,8 +33,6 @@ export const createEntry = async (req: Request, res: Response): Promise<void> =>
     res.status(400).json({ success: false, message: 'Validation error', error });
   }
 };
-
-
 
 export const updateEntry = async (req: Request, res: Response): Promise<void> => {
   try {
@@ -55,8 +49,6 @@ export const updateEntry = async (req: Request, res: Response): Promise<void> =>
     res.status(400).json({ success: false, message: 'Validation error', error });
   }
 };
-
-
 
 export const deleteEntry = async (req: Request, res: Response): Promise<void> => {
   try {
