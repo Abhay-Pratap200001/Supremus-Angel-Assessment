@@ -111,7 +111,7 @@ supremus-angel/
 │   │   ├── 📂 config/
 │   │   │   └── db.ts                      # MongoDB connection via Mongoose
 │   │   ├── 📂 controllers/
-│   │   │   └── formEntry.controller.ts    # CRUD handlers — get all, get by id, create, update, delete
+│   │   │   └── formEntry.controller.ts    # CRUD handlers — getall, create,
 │   │   ├── 📂 models/
 │   │   │   └── formEntry.model.ts         # Mongoose schema + IField / IFormEntry TypeScript interfaces
 │   │   ├── 📂 routes/
@@ -210,10 +210,7 @@ Base URL: `/api/entries`
 | Method | Endpoint | Description | Body |
 |:---:|:---|:---|:---|
 | ![GET](https://img.shields.io/badge/GET-22c55e?style=flat-square) | `/api/entries` | Fetch all saved entries | — |
-| ![GET](https://img.shields.io/badge/GET-22c55e?style=flat-square) | `/api/entries/:id` | Fetch single entry by ID | — |
 | ![POST](https://img.shields.io/badge/POST-3b82f6?style=flat-square) | `/api/entries` | Create a new entry | `{ title, fields[] }` |
-| ![PUT](https://img.shields.io/badge/PUT-f59e0b?style=flat-square) | `/api/entries/:id` | Update an existing entry | `{ title, fields[] }` |
-| ![DELETE](https://img.shields.io/badge/DELETE-ef4444?style=flat-square) | `/api/entries/:id` | Delete an entry | — |
 | ![GET](https://img.shields.io/badge/GET-22c55e?style=flat-square) | `/health` | Server health check | — |
 
 ```json
@@ -284,7 +281,7 @@ graph TD
         end
     end
 
-    FE -->|"HTTP Request · GET POST PUT DELETE /api/entries"| BE
+    FE -->|"HTTP Request · GET POST  /api/entries"| BE
     BE -->|"JSON Response · { success, data }"| FE
 
     subgraph BE["🟢 Express Backend — Node.js :5000"]
